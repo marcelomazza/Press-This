@@ -1,0 +1,63 @@
+// EXAMPLE
+// body {
+// 	@include breakpoint( M ){
+// 		font-size: 14px;
+// 	};
+// }
+
+
+.pt-overlay {
+	position: fixed;
+	top: 3.21429em;
+	bottom: 0;
+	padding: 3em;
+	z-index: 1;
+	background: #f7f7f7;
+	text-align: center;
+
+	transform: translateY(0);
+
+	.button--primary {
+		margin-bottom: 2em;
+	}
+
+	img {
+		vertical-align: bottom;
+		margin: 0 5px;
+	}
+
+	@include breakpoint( S ){
+
+		display: none;
+
+	}
+
+}
+
+.pt-overlay--dismissed {
+	transform: translateY(100%);
+    animation: dismiss 600ms;
+}
+
+@keyframes dismiss {
+  
+  0% {
+	transform: translateY(0);
+    opacity: 1;
+  }
+
+  20% {
+	transform: translateY(-5%);
+    opacity: 1;
+  }   
+  
+  95% {
+    opacity: 0;
+  }  
+  
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  
+}

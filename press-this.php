@@ -760,6 +760,13 @@ class WpPressThis {
 			</li>
 		</ul>
 	</div>
+	<div id="wppt_add_to_homescreen" class="pt-overlay">
+		<h2>Don't forget to add Press This to your smartphone.</h2>
+		<!-- hotlinking forecast icon just for mockup -->
+		<p>Tap the button <img src="http://forecast.io/images/iphone_share.png" width="20"> below and choose "Add to Home Screen"</p>
+		<button class="button--primary">Ok, got it.</button>
+		<button class="button--secondary">Show again this message next time.</button>
+	</div>
 	<div id="wppt_scanbar" class="scan">
 		<form action="<?php echo esc_url( $form_action ) ?>" method="GET">
 			<input type="url" name="u" id="wppt_url_scan" class="scan__url" value="" placeholder="<?php echo esc_attr( $i18n['enter-url-to-scan'] ) ?>" />

@@ -388,6 +388,7 @@
 				window.console && window.console.log(url, no_scheme_url);
 			}
 
+
 /* ***************************************************************
  * RENDERING FUNCTIONS
  *************************************************************** */
@@ -581,6 +582,8 @@
 			}
 
 			function monitor(){
+				var $wppt_add_to_homescreen = $('#wppt_add_to_homescreen');
+
 				show_spinner();
 
 				// Sites list and related functionality
@@ -629,6 +632,11 @@
 				// Close button
 				$('#wppt_close_button').on('click', function(){
 					close_self( get_canonical_link( data ) );
+				});
+
+				// Dismiss Add to Homescreen - just mockup, not ready for production!
+				$wppt_add_to_homescreen.find('.button--primary, .button--secondary').on('click', function() {
+					$wppt_add_to_homescreen.addClass('pt-overlay--dismissed')
 				});
 
 				hide_spinner();
